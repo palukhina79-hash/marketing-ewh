@@ -1,0 +1,25 @@
+site_name: Marketing EWH Hub
+theme:
+  name: material
+  language: ru
+  palette:
+    - scheme: default
+      primary: red
+      accent: indigo
+  features:
+    - navigation.sections
+    - navigation.expand
+
+nav:
+  - Главная: index.md
+  - 🍱 Карточки продуктов:
+      - Список: 01_product_cards/index.md
+  - 🎨 Материалы (Assets):
+      - Обзор: 02_marketing_assets/index.md
+  - 💡 УТП и Хуки:
+      - База хуков: 03_usp_hooks/index.md
+  - 📂 Инфо:
+      - Глоссарий: 99_glossary/index.md
+
+plugins:
+  - search
