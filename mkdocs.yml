@@ -1,14 +1,28 @@
 site_name: Marketing EWH Hub
+strict: true
+
 theme:
   name: material
-  language: ru
+  custom_dir: docs/overrides
   palette:
-    - scheme: default
-      primary: red
-      accent: indigo
+    - scheme: light
+      primary: slate
+      accent: slate
+  font:
+    text: Helvetica
+    code: Roboto Mono
+  language: ru
   features:
+    - navigation.instant
+    - navigation.tracking
     - navigation.sections
     - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - search.share
 
 nav:
   - Главная: index.md
@@ -20,6 +34,9 @@ nav:
       - База хуков: 03_usp_hooks/index.md
   - 📂 Инфо:
       - Глоссарий: 99_glossary/index.md
+
+extra_css:
+  - stylesheets/brand.css
 
 plugins:
   - search
