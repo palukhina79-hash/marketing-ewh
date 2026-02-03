@@ -1419,7 +1419,6 @@ button:focus-visible {
 .md-typeset details.check>summary::before {
   color: #ed1c24 !important;
   background-color: #ed1c24 !important;
-  /* For some icon types */
   -webkit-mask-image: var(--md-admonition-icon--tip);
   mask-image: var(--md-admonition-icon--tip);
 }
@@ -1728,7 +1727,19 @@ img:not([src]) {
   animation: shimmer 2s infinite;
 }
 
-/* Ensure full width when sidebar is hidden on landing */
+/* Ensure full width and hide sidebar when hidden via meta */
 [data-md-color-scheme="light"] .md-content {
   margin-left: 0 !important;
+}
+
+/* Final aggressive fix: if index.md has hide meta, Material adds attributes */
+[data-md-component="sidebar"][data-md-type="navigation"][hidden],
+.md-sidebar--primary[hidden],
+.md-sidebar--secondary[hidden] {
+  display: none !important;
+}
+
+/* Force content to fill space */
+.md-content__inner {
+  max-width: 100% !important;
 }
